@@ -7,7 +7,7 @@ import (
 
 	"github.com/seatgeek/resec/resec/consul"
 	"github.com/seatgeek/resec/resec/redis"
-	cli "gopkg.in/urfave/cli.v1"
+	"github.com/urfave/cli/v2"
 )
 
 // setup returns the default configuration for the ReSeC

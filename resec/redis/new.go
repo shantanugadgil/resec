@@ -7,7 +7,7 @@ import (
 	"github.com/jpillora/backoff"
 	"github.com/seatgeek/resec/resec/state"
 	log "github.com/sirupsen/logrus"
-	cli "gopkg.in/urfave/cli.v1"
+	"github.com/urfave/cli/v2"
 )
 
 func NewConnection(m *cli.Context) (*Manager, error) {

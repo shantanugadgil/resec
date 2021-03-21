@@ -11,7 +11,7 @@ import (
 	"github.com/seatgeek/resec/resec/redis"
 	"github.com/seatgeek/resec/resec/state"
 	log "github.com/sirupsen/logrus"
-	cli "gopkg.in/urfave/cli.v1"
+	"github.com/urfave/cli/v2"
 )
 
 func NewConnection(c *cli.Context, redisConfig redis.Config) (*Manager, error) {
