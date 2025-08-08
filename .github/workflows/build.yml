@@ -22,7 +22,7 @@ jobs:
       - name: test
         run: make test
       - name: build
-        run: GOBUILD="linux-amd64 linux-arm64 darwin-amd64" make -j build
+        run: GOBUILD="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64" make -j build
       - name: artifacts Linux amd64
         uses: actions/upload-artifact@v4
         with:
@@ -33,8 +33,13 @@ jobs:
         with:
           name: resec-linux-arm64
           path: build/resec-linux-arm64
-      - name: artifacts MacOS
+      - name: artifacts MacOS amd64
         uses: actions/upload-artifact@v4
         with:
           name: resec-darwin-amd64
           path: build/resec-darwin-amd64
+      - name: artifacts MacOS arm64
+        uses: actions/upload-artifact@v4
+        with:
+          name: resec-darwin-arm64
+          path: build/resec-darwin-arm64
