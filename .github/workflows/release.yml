@@ -21,6 +21,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CGO_ENABLED: 0
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./build/resec-linux-amd64
@@ -31,6 +32,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CGO_ENABLED: 0
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./build/resec-linux-arm64
@@ -41,6 +43,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CGO_ENABLED: 0
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./build/resec-darwin-amd64
@@ -51,6 +54,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CGO_ENABLED: 0
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./build/resec-windows-amd64
