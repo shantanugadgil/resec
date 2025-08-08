@@ -39,7 +39,7 @@ jobs:
           asset_name: resec-linux-arm64
           asset_content_type: application/octet-stream
       - name: Upload MacOS amd64 binary
-        id: upload-release-asset-macos
+        id: upload-release-asset-macos-amd64
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,7 +50,7 @@ jobs:
           asset_name: resec-darwin-amd64
           asset_content_type: application/octet-stream
       - name: Upload MacOS arm64 binary
-        id: upload-release-asset-macos
+        id: upload-release-asset-macos-arm64
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
