@@ -220,6 +220,7 @@ func TestReconciler_SlaveMasterSyncInProgress(t *testing.T) {
 		).
 		eval(ResultMasterSyncInProgress)
 }
+
 func TestReconciler_SlaveMasterLinkDownToolong(t *testing.T) {
 	helper := newTestReconciler(t)
 	helper.consume()
@@ -250,6 +251,7 @@ func TestReconciler_SlaveMasterLinkDownToolong(t *testing.T) {
 		).
 		eval(ResultMasterLinkDown)
 }
+
 func TestReconciler_SlaveMasterLinkDownWithinReason(t *testing.T) {
 	helper := newTestReconciler(t)
 	helper.consume()
