@@ -38,7 +38,7 @@ jobs:
           asset_path: ./build/resec-linux-arm64
           asset_name: resec-linux-arm64
           asset_content_type: application/octet-stream
-      - name: Upload MacOS binary
+      - name: Upload MacOS amd64 binary
         id: upload-release-asset-macos
         uses: actions/upload-release-asset@v1
         env:
@@ -49,14 +49,14 @@ jobs:
           asset_path: ./build/resec-darwin-amd64
           asset_name: resec-darwin-amd64
           asset_content_type: application/octet-stream
-#      - name: Upload Windows binary
-#        id: upload-release-asset-windows
-#        uses: actions/upload-release-asset@v1
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          CGO_ENABLED: 0
-#        with:
-#          upload_url: ${{ github.event.release.upload_url }}
-#          asset_path: ./build/resec-windows-amd64
-#          asset_name: resec-windows-amd64
-#          asset_content_type: application/octet-stream
+      - name: Upload MacOS arm64 binary
+        id: upload-release-asset-macos
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CGO_ENABLED: 0
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./build/resec-darwin-arm64
+          asset_name: resec-darwin-arm64
+          asset_content_type: application/octet-stream
